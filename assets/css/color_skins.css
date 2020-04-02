@@ -1,0 +1,39 @@
+.theme-blue ::selection {
+	color: #fff;
+	background: #449cff
+}
+
+.theme-blue .page-loader-wrapper {
+	background: #449cff
+}
+
+.theme-blue #left-sidebar .nav-tabs .nav-link.active {
+	color: #449cff
+}
+
+.theme-blue:before,
+.theme-blue:after {
+	background: #449cff
+}
+
+.theme-blue #wrapper:before,
+.theme-blue #wrapper:after {
+	background: #449cff
+}
+
+.theme-blue .sidebar-nav .metismenu>li.active>a {
+	border-left-color: #449cff
+}
+
+.theme-blue .navbar-nav ul.menu-icon {
+	background: #449cff
+}
+
+.theme-blue .sidebar-nav .metismenu>li i {
+	color: #449cff
+}
+
+.theme-blue .fancy-checkbox input[type="checkbox"]:checked+span:before {
+	background: #449cff;
+	border-color: #449cff
+}
