@@ -3878,3 +3878,9 @@ ul.list-email-received>li,
 .todo_list .fancy-checkbox input[type="checkbox"]:checked+span {
 	text-decoration: line-through
 }
+
+.table tbody tr td,
+.table tbody th td {
+	vertical-align: middle;
+	white-space: nowrap
+}
