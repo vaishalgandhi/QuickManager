@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Quick Manager | Employee Management</title>
+<title>Quick Manager | Payroll Management</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -255,7 +255,7 @@
                             <a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth">
                                 <i class="fa fa-arrow-left"></i>
                             </a>
-                            Employee Management
+                            Payroll Management
                         </h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item">
@@ -263,7 +263,7 @@
                                     <i class="icon-home"></i>
                                 </a>
                             </li>                            
-                            <li class="breadcrumb-item active">Employee Management</li>
+                            <li class="breadcrumb-item active">Payroll Management</li>
                         </ul>
                     </div>
                 </div>
@@ -272,60 +272,25 @@
             <div class="row clearfix">
                 <div class="col-lg-12">
                     <div class="card">
-                        <div class="header">
-                            <h2>Employee List</h2>
-                            <ul class="header-dropdown">
-                                <li><a href="javascript:void(0);" class="btn btn-info" data-toggle="modal" data-target="#addemployee">Add New</a></li>
-                            </ul>
-                        </div>
                         <div class="body">
                             <div class="table-responsive">
-                                <table class="table table-hover js-basic-example dataTable table-custom table-striped m-b-0 c_list">
-                                    <thead class="thead-dark">
+                                <table class="table table-hover js-basic-example dataTable table-custom m-b-0">
+                                    <thead>
                                         <tr>
-                                            <th>
-                                                <label class="fancy-checkbox">
-                                                    <input class="select-all" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </th>
+                                            <th></th>
                                             <th>Name</th>
                                             <th>Employee ID</th>
                                             <th>Phone</th>
                                             <th>Join Date</th>
                                             <th>Role</th>
+                                            <th>Salary</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar1.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Jhon Doe</h6>
-                                                <span>jhondoe@gmail.com</span>
-                                            </td>
-                                            <td><span>0215</span></td>
-                                            <td><span>+ 807-111-1111</span></td>
-                                            <td>24 Jun, 2015</td>
-                                            <td>Web Designer</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar2.jpg" class="rounded-circle avatar" alt="">
+                                                <img src="assets/images/employee/avatar2.jpg" class="rounded-circle width35" alt="">
                                             </td>
                                             <td>
                                                 <h6 class="mb-0">Jane Doe</h6>
@@ -335,19 +300,15 @@
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>28 Jun, 2015</td>
                                             <td>Web Developer</td>
+                                            <td>$589</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar3.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar3.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jane Doe</h6>
                                                 <span>janedoe@gmail.com</span>
@@ -356,19 +317,15 @@
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>21 July, 2015</td>
                                             <td>Web Developer</td>
+                                            <td>$589</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar4.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar4.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jane Doe</h6>
                                                 <span>janedoe@gmail.com</span>
@@ -377,19 +334,15 @@
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>18 Jan, 2016</td>
                                             <td>Team Leader</td>
+                                            <td>$589</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar5.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar5.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jhon Doe</h6>
                                                 <span>jhondoe@gmail.com</span>
@@ -398,19 +351,15 @@
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>08 Mar, 2016</td>
                                             <td>Android Developer</td>
+                                            <td>$589</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar6.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar6.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jane Doe</h6>
                                                 <span>janedoe@gmail.com</span>
@@ -419,133 +368,111 @@
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>13 Nov, 2016</td>
                                             <td>IOS Developer</td>
+                                            <td>$700</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar7.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Jane Doe</h6>
-                                                <span>janedoe@gmail.com</span>
-                                            </td>
-                                            <td><span>1215</span></td>
-                                            <td><span>+ 807-111-1111</span></td>
-                                            <td>24 Jun, 2015</td>
-                                            <td>Web Designer</td>
-                                            <td>
-                                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
-                                                <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar8.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar1.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jhon Doe</h6>
                                                 <span>jhondoe@gmail.com</span>
+                                            </td>
+                                            <td><span>0215</span></td>
+                                            <td><span>+ 807-111-1111</span></td>
+                                            <td>24 Jun, 2015</td>
+                                            <td>Web Designer</td>
+                                            <td>$700</td>
+                                            <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
+                                                <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
+                                                <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><img src="assets/images/employee/avatar2.jpg" class="rounded-circle width35" alt=""></td>
+                                            <td>
+                                                <h6 class="mb-0">Jane Doe</h6>
+                                                <span>janedoe@gmail.com</span>
                                             </td>
                                             <td><span>1216</span></td>
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>28 Jun, 2015</td>
                                             <td>Web Developer</td>
+                                            <td>$650</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar9.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar3.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
-                                                <h6 class="mb-0">Jhon Doe</h6>
-                                                <span>jhondoe@gmail.com</span>
+                                                <h6 class="mb-0">Jane Doe</h6>
+                                                <span>janedoe@gmail.com</span>
                                             </td>
                                             <td><span>1218</span></td>
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>21 July, 2015</td>
                                             <td>Web Developer</td>
+                                            <td>$700</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar10.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar4.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
-                                                <h6 class="mb-0">Jhon Doe</h6>
-                                                <span>jhondoe@gmail.com</span>
+                                                <h6 class="mb-0">Jane Doe</h6>
+                                                <span>janedoe@gmail.com</span>
                                             </td>
                                             <td><span>1222</span></td>
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>18 Jan, 2016</td>
                                             <td>Team Leader</td>
+                                            <td>$750</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar5.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar5.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jhon Doe</h6>
-                                                <span>jhondoe@gmail.com</span>
+                                                <span>jhonedoe@gmail.com</span>
                                             </td>
                                             <td><span>2232</span></td>
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>08 Mar, 2016</td>
                                             <td>Android Developer</td>
+                                            <td>$700</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                <img src="assets/images/employee/avatar6.jpg" class="rounded-circle avatar" alt="">
-                                            </td>
+                                            <td><img src="assets/images/employee/avatar6.jpg" class="rounded-circle width35" alt=""></td>
                                             <td>
                                                 <h6 class="mb-0">Jane Doe</h6>
                                                 <span>janedoe@gmail.com</span>
                                             </td>
-                                            <td><span>2233</span></td>
+                                            <td><span>3233</span></td>
                                             <td><span>+ 807-111-1111</span></td>
                                             <td>13 Nov, 2016</td>
                                             <td>IOS Developer</td>
+                                            <td>$750</td>
                                             <td>
+                                                <button type="button" class="btn btn-sm btn-success" data-toggle="tooltip" data-placement="top" title="send salary slip"><i class="fa fa-envelope-o"></i> Slip</button>
                                                 <button type="button" class="btn btn-sm btn-outline-secondary" title="Edit"><i class="fa fa-edit"></i></button>
                                                 <button type="button" class="btn btn-sm btn-outline-danger js-sweetalert" title="Delete" data-type="confirm"><i class="fa fa-trash-o"></i></button>
                                             </td>
@@ -556,66 +483,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Add Employee Modal Box -->
-<div class="modal animated zoomIn" id="addemployee" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h6 class="title" id="defaultModalLabel">Add Employee</h6>
-            </div>
-            <div class="modal-body">
-                <div class="row clearfix">
-                    <div class="col-md-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Email ID">
-                        </div>
-                    </div> 
-                    <div class="col-12">
-                        <div class="form-group">                                    
-                            <input type="number" class="form-control" placeholder="Phone Number">
-                        </div>
-                    </div>    
-                    <div class="col-md-4">
-                        <div class="form-group">                                   
-                            <input type="text" class="form-control" placeholder="Employee ID">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Join Date">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="form-group">                                    
-                            <input type="text" class="form-control" placeholder="Role">
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-group">                                            
-                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
-                            <small id="fileHelp" class="form-text text-muted">Maximum 2 Mb allowed.</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary">Add</button>
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">CLOSE</button>
             </div>
         </div>
     </div>
