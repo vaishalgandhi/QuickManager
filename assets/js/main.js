@@ -1,9 +1,31 @@
+function showConfirmMessage() {
+    swal({
+        title: "Are you sure?",
+        text: "You will not be able to recover this record!",
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#dc3545",
+        confirmButtonText: "Yes, delete it!",
+        closeOnConfirm: false
+    }, function () {
+        swal("Deleted!", "Record has been deleted.", "success");
+    });
+}
+
 $(function() {
     "use strict";
     
     setTimeout(function() {
         $(".page-loader-wrapper").fadeOut()
-    }, 50)
+    }, 50);
+
+    $('.js-sweetalert').on('click', function () {
+        var type = $(this).data('type');
+        
+        if (type === 'confirm') {
+            showConfirmMessage();
+        }
+    });
 });
 
 $(document).ready(function() {

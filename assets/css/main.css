@@ -901,6 +901,9 @@ a:focus {
 .sidebar-nav .metismenu a,
 ul.choose-skin li,
 .auth-box .helper-text,
+.w_social2 .pw_img:before,
+.w_social2 .pw_content .pw_meta small,
+.w_social2 .pw_content .pw_meta span,
 .metric-inline i,
 .metric-inline span {
 	display: block
@@ -3928,4 +3931,145 @@ ul.list-email-received>li,
 .table tbody th td {
 	vertical-align: middle;
 	white-space: nowrap
+}
+
+.w_social2 .pw_img {
+	position: relative;
+	overflow: hidden
+}
+
+.w_social2 .pw_img:before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 100%);
+	-webkit-transform: skewX(-25deg);
+	transform: skewX(-25deg)
+}
+
+.w_social2 .pw_img:hover::before {
+	-webkit-animation: shine .75s;
+	animation: shine .75s
+}
+
+@-webkit-keyframes shine {
+	100% {
+		left: 125%
+	}
+}
+
+@keyframes shine {
+	100% {
+		left: 125%
+	}
+}
+
+.w_social2 .pw_img img {
+	border-radius: 3px 3px 0 0
+}
+
+.w_social2 .pw_content .pw_header {
+	padding: 20px;
+	border-bottom: 1px solid #f0f0f0
+}
+
+.w_social2 .pw_content .pw_header small {
+	font-size: 12px
+}
+
+.w_social2 .pw_content .pw_meta {
+	padding: 20px
+}
+
+.w_social2 .pw_content .pw_meta span {
+	font-weight: 500
+}
+
+.w_social3 .card {
+	padding: 25px
+}
+
+.w_social3 .card .fa {
+	font-size: 30px
+}
+
+.w_social3 .text {
+	margin-top: 0 !important
+}
+
+.w_social3 .facebook-widget .icon i {
+	color: #3b5998
+}
+
+.w_social3 .google-widget .icon i {
+	color: #d34836
+}
+
+.w_social3 .twitter-widget .icon i {
+	color: #0084b4
+}
+
+.w_social3 .instagram-widget .icon i {
+	color: #fb3958
+}
+
+.w_social3 .linkedin-widget .icon i {
+	color: #0077B5
+}
+
+.w_social3 .behance-widget .icon i {
+	color: #053eff
+}
+
+.w_feed {
+	border-radius: .55rem;
+	color: #fff
+}
+
+.w_feed.facebook {
+	background: #3b5998
+}
+
+.w_feed.twitter {
+	background: #00aced
+}
+
+.w_feed.linkedin {
+	background: #0066CC
+}
+
+.w_feed.google {
+	background: #d34836
+}
+
+.w_feed .carousel-inner {
+	box-shadow: none
+}
+
+.w_feed .carousel-inner .carousel-item {
+	padding: 20px
+}
+
+.w_feed .carousel-inner h4 {
+	font-weight: 300
+}
+
+.w_feed .carousel-inner h4 span {
+	font-weight: 700
+}
+
+.w_followers li:hover .btn {
+	opacity: 1
+}
+
+.w_followers li .btn {
+	position: absolute;
+	right: 0;
+	top: 4px;
+	opacity: 0
 }
