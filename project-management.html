@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Quick Manager | Project Management</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="description" content="HR and PM solutions tool">
+<meta name="author" content="Hasmukhsinh Solanki, Rahul Nagpal, Vaishal Gandhi">
+
+<!-- VENDOR CSS -->
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+<link rel="stylesheet" href="assets/css/color_skins.css">
+
+</head>
+<body class="theme-blue">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30">
+            <img src="assets/images/straight-loader.gif" width="48" height="48" alt="Loading">
+        </div>
+        <p>Please wait...</p>      
+    </div>
+</div>
+<!-- Overlay For Sidebars -->
+
+<div id="wrapper">
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-btn">
+                <button type="button" class="btn-toggle-offcanvas">
+                    <i class="lnr lnr-menu fa fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="navbar-brand">
+                <a href="dashboard.html">
+                    <img src="assets/images/logo.png" alt="Quick Manager Logo" class="img-responsive logo">
+                </a>
+            </div>
+            
+            <div class="navbar-right">
+                <form id="navbar-search" class="navbar-form search-form">
+                    <input value="" class="form-control" placeholder="Search here..." type="text">
+                    <button type="button" class="btn btn-default">
+                        <i class="icon-magnifier"></i>
+                    </button>
+                </form>               
+
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">                        
+                        <li>
+                            <a href="chat.html" class="icon-menu d-none d-sm-block">
+                                <i class="icon-bubbles"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="support-ticket.html" class="icon-menu d-none d-sm-block">
+                                <i class="icon-envelope"></i><span class="notification-dot"></span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+                                <i class="icon-bell"></i>
+                                <span class="notification-dot"></span>
+                            </a>
+                            <ul class="dropdown-menu notifications animated shake">
+                                <li class="header"><strong>You have 4 new Notifications</strong></li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-warning"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <span class="timestamp">10:00 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>                               
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-like text-success"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <span class="timestamp">11:30 AM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                 <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-pie-chart text-info"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                                <span class="timestamp">04:00 PM Today</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <div class="media-left">
+                                                <i class="icon-info text-danger"></i>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                                                <span class="timestamp">Yesterday</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="footer"><a href="javascript:void(0);" class="more">See all notifications</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="login.html" class="icon-menu"><i class="icon-login"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <img src="assets/images/avatar.png" class="rounded-circle user-photo" alt="User Profile Picture">
+                <div class="dropdown">
+                    <span>Welcome,</span><br>
+                    <strong>Jane Doe</strong>
+                </div>
+                <hr>
+            </div>
+            <!-- Nav tabs -->
+                
+            <!-- Tab panes -->
+            <div class="tab-content p-l-0 p-r-0">
+                <div class="tab-pane animated fadeIn active" id="hr_menu">
+                    <nav class="sidebar-nav">
+                        <ul class="main-menu metismenu">
+                            <li class="active">
+                                <a href="dashboard.html">
+                                    <i class="icon-speedometer"></i>
+                                    <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="to-do.html">
+                                    <i class="icon-list"></i>To-Do
+                                </a>
+                            </li>
+                            <li>
+                                <a href="chat.html">
+                                    <i class="icon-bubbles"></i>Chat
+                                </a>
+                            </li>
+                            <li>
+                                <a href="support-ticket.html">
+                                    <i class="icon-envelope"></i>Support Ticket
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#HR" class="has-arrow"><i class="icon-users"></i><span>HR</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="employee-management.html">
+                                            Employees Management
+                                        </a>
+                                    </li>
+                                        <li>
+                                            <a href="payroll-management.html">
+                                            Paroll Management
+                                        </a>
+                                    </li>
+                                        <li>
+                                            <a href="social-networking.html">
+                                            Social Networking
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#PM" class="has-arrow"><i class="icon-users"></i><span>Project Manager</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="project-management.html">
+                                            Project Management
+                                        </a>
+                                    </li>
+                                        <li>
+                                            <a href="payslip.html">
+                                            Payslip
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
+                                <ul>
+                                    <li>
+                                        <a href="project.html">
+                                            Project
+                                        </a>
+                                    </li>
+                                        <li>
+                                            <a href="taskboard.html">
+                                            Taskboard
+                                        </a>
+                                    </li>                                   
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="about-us.html">
+                                    <i class="icon-user"></i>About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html">
+                                    <i class="icon-settings"></i>Settings
+                                </a>
+                            </li>
+                            <li>
+                                <a href="settings.html">
+                                    <i class="icon-settings"></i>Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>          
+            </div>          
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row">
+                    <div class="col-lg-6 col-md-8 col-sm-12">
+                        <h2>
+                            <a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth">
+                                <i class="fa fa-arrow-left"></i>
+                            </a>
+                            Project Management
+                        </h2>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item">
+                                <a href="dashboard.html">
+                                    <i class="icon-home"></i>
+                                </a>
+                            </li>                            
+                            <li class="breadcrumb-item active">Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <form class="mb-4 mt-3">
+                        <div class="form-group mb-2 m-l-0">
+                            <label for="inputPassword2" class="sr-only">Search</label>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/01.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">iNext - Responsive Template</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 87%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/03.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Wordpress - Theme Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 15%;">
+                                        <span class="sr-only">15% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/02.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Logo Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 90%;">
+                                        <span class="">90% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/01.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">iNext - Responsive Template</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 87%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/03.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Wordpress - Theme Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="15" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 15%;">
+                                        <span class="sr-only">15% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/02.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Logo Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 90%;">
+                                        <span class="">90% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vendor Javascript -->
+<script src="assets/js/libscripts.bundle.js"></script>
+<script src="assets/js/vendorscripts.bundle.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
