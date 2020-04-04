@@ -4225,3 +4225,55 @@ ul.list-email-received>li,
 	-webkit-box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2);
 	box-shadow: 0 14px 24px rgba(62, 57, 107, 0.2)
 }
+
+.badge {
+	padding: 4px 8px;
+	text-transform: uppercase;
+	line-height: 12px;
+	border: 1px solid;
+	font-weight: 400
+}
+
+.badge-icon {
+	padding: 0.4em 0.55em
+}
+
+.badge-icon i {
+	font-size: 0.8em
+}
+
+.badge-default {
+	background: transparent;
+	border-color: #9A9A9A;
+	color: #9A9A9A
+}
+
+.badge-primary {
+	background: transparent;
+	border-color: #01b2c6;
+	color: #01b2c6
+}
+
+.badge-info {
+	background: transparent;
+	border-color: #3C89DA;
+	color: #3C89DA
+}
+
+.badge-success {
+	background: transparent;
+	border-color: #22af46;
+	color: #22af46
+}
+
+.badge-warning {
+	background: transparent;
+	border-color: #f3ad06;
+	color: #f3ad06
+}
+
+.badge-danger {
+	background: transparent;
+	border-color: #de4848;
+	color: #de4848
+}
