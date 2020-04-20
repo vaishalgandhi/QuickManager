@@ -15,7 +15,7 @@ DatabaseHelper.sequelizeErrorHandler = (sequelizeError) => {
         }
     }
 
-    return ["something went wrong"];
+    return ["Something went wrong"];
 };
 
 module.exports = DatabaseHelper;

@@ -11,7 +11,7 @@ class BaseRepository {
 
         if (typeof query === "number") {
             // Search by id
-            return this.model.findById(query);
+            return this.model.findByPk(query);
         }
     }
 

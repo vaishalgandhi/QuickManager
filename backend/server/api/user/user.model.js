@@ -1,5 +1,6 @@
 import { DataTypes } from "sequelize";
 import bcrypt from 'bcryptjs';
+import moment from 'moment';
 
 export default class User {
     static definition = {
@@ -114,6 +115,15 @@ export default class User {
 
     // All relationships goes here
     static associate(models) {
+        this.belongsTo(models.Role, {
+            as: 'Role',
+            constraints: true,
+            foreignKey: {
+                name: 'roleId',
+                field: 'role_id',
+                allowNull: false,
+            },
+        });
     };
 
     // This method will fetch user by id
@@ -124,6 +134,17 @@ export default class User {
     // This method will concate first name and last name
     get fullName() {
         return `${this.firstName} ${this.lastName}`.trim();
+    }
+
+
+    // This method will return status in text format
+    statusText() {
+        return this.status == 1 ? 'Active' : 'Inactive';
+    }
+
+    // This method will return created at date in display format
+    createdAtDisplay() {
+        return moment(this.created_at, "YYYY-MM-DD H:m").format("DD-MM-YYYY H:m");
     }
 
     /*
