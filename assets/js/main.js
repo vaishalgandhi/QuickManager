@@ -1,3 +1,17 @@
+var apiServer = "http://127.0.0.1:8081/";
+var currentPage = window.location.href.substring(window.location.href.lastIndexOf('/') + 1);
+
+if (typeof(Storage) == "undefined") {
+    document.body.innerHTML = "Your browser does not support local storage";
+}
+
+if (
+    !['login.html', 'signup.html', 'signup2.html'].includes(currentPage) && 
+    localStorage.getItem("access-token") === null
+    ) {
+    location.href = 'login.html';
+}
+
 function showConfirmMessage() {
     swal({
         title: "Are you sure?",
@@ -9,6 +23,25 @@ function showConfirmMessage() {
         closeOnConfirm: false
     }, function () {
         swal("Deleted!", "Record has been deleted.", "success");
+    });
+}
+
+function loginHandler() {
+    var $form = $("#msform");
+    
+    $.ajax({
+        type: 'POST',
+        url: apiServer + $form.attr("action"),
+        data: $form.serialize(), 
+        success: function(response) {
+            localStorage.setItem("access-token", JSON.stringify("Bearer " + response.data.token));
+            localStorage.setItem("current-user", JSON.stringify(response.data.user));
+
+            location.href = "dashboard.html";
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status+ " " +thrownError);
+        }
     });
 }
 

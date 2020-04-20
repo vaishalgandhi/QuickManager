@@ -26,16 +26,16 @@
 
 
     <!-- multistep form -->
-<form id="msform" class="form1">
+<form id="msform" class="form1" action="auth/login" method="post">
   
   <!-- fieldsets -->
   <fieldset>
     <h2 class="fs-title"><strong>Login</strong></h2>
   
-    <input type="text" name="email" placeholder="Email" />
-    <input type="password" name="pass" placeholder="Password" />
+    <input type="text" name="email" placeholder="Email" required="required" />
+    <input type="password" name="password" placeholder="Password" required="required"  />
     <!-- <input type="password" name="cpass" placeholder="Confirm Password" /> -->
-    <button type="button" name="login" id="login" class="btn btn-primary col-lg-5">Login</button>
+    <button type="button" name="login" id="login" class="btn btn-primary col-lg-5" onclick="loginHandler();">Login</button>
     <button type="button" id="signup" class="btn btn-success col-lg-5">Sign Up</button>
     <br><br>
         <a href="#" class="href1"><u>Forgot user?</a>
@@ -52,14 +52,15 @@
 <script src="assets/js/main.js"></script>
 
 <script type="text/Javascript" >
+
   //jQuery time
-  document.getElementById("login").onclick = function () {
-          location.href = "dashboard.html";
-      };
+  // document.getElementById("login").onclick = function () {
+  //         location.href = "dashboard.html";
+  //     };
   
-  document.getElementById("signup").onclick = function () {
-          location.href = "signup.html";
-      };
+  // document.getElementById("signup").onclick = function () {
+  //         location.href = "signup.html";
+  //     };
   
   </script>
 </body>

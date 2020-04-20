@@ -121,7 +121,7 @@ class AuthController extends BaseController {
         // object to sign the jwt token and responed
         // it back to client
         const token = authenticate.signToken(req.user);
-        res.send(super.respond({ token }, "You have successfully login"));
+        res.send(super.respond({ token: token, user: req.user.toJson() }, "You have successfully login"));
     }
 }
 
