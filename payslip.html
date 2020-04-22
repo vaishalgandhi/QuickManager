@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Quick Manager | Project</title>
+<title>Quick Manager | Payslip</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -11,8 +11,6 @@
 <!-- VENDOR CSS -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/sweetalert.css"/>
-<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="assets/css/main.css">
@@ -182,9 +180,9 @@
                                             Employees Management
                                         </a>
                                     </li>
-                                        <li>	
+                                        <li>
                                             <a href="payroll-management.html">
-                                            Payroll Management
+                                            Paroll Management
                                         </a>
                                     </li>
                                         <li>
@@ -196,15 +194,13 @@
                             </li>
                             <li>
                                 <a href="#PM" class="has-arrow"><i class="icon-users"></i><span>Project Manager</span></a>
-                                <ul>
-
-                                    <li class="active">
-
+                                <ul aria-expanded="true" class="collapse in">
+                                    <li>
                                         <a href="project-management.html">
                                             Project Management
                                         </a>
                                     </li>
-                                        <li>
+                                        <li class="active">
                                             <a href="payslip.html">
                                             Payslip
                                         </a>
@@ -214,9 +210,7 @@
                             <li>
                                 <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
                                 <ul>
-
                                     <li>
-
                                         <a href="project.html">
                                             Project
                                         </a>
@@ -231,11 +225,6 @@
                             <li>
                                 <a href="about-us.html">
                                     <i class="icon-user"></i>About Us
-                                </a>
-                            </li>
-                            <li>
-                                <a href="settings.html">
-                                    <i class="icon-settings"></i>Settings
                                 </a>
                             </li>
                             <li>
@@ -259,9 +248,7 @@
                             <a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth">
                                 <i class="fa fa-arrow-left"></i>
                             </a>
-                            Project
-
-
+                            Payslip
                         </h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item">
@@ -269,138 +256,154 @@
                                     <i class="icon-home"></i>
                                 </a>
                             </li>                            
-
-                            <li class="breadcrumb-item active">Project</li>
-
+                            <li class="breadcrumb-item active">Project Manager / Payslip</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
+            <div class="row justify-content-around">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card top_counter">
+                        
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="card top_counter">
+                        
+                    </div>
+                </div>            
+            </div>
+
             <div class="row clearfix">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Project List</h2>
-                            
-                        </div>
+                <div class="col-lg-12 col-md-12">
+                    <div class="card invoice1">                        
                         <div class="body">
-                            <div class="table-responsive">
-                                <table class="table table-hover js-basic-example dataTable table-custom table-striped m-b-0 c_list">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>
-                                                <label class="fancy-checkbox">
-                                                    <input class="select-all" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </th>
-                                            <th>Project Name</th>
-                                            <th>Project ID</th>
-                                            
-                                            <th>Start Date</th>
-                                            <th>Manager</th>
+                            
+                            <div class="invoice-mid clearfix">      
+                                <div class="clientlogo">
+                                    <img src="assets\images\employee\avatar5.jpg" alt="user" class="rounded-circle img-fluid">
+                                </div>
+                                <div class="test">
+                                    <h6>John Doe</h6>
+                                    <p>Web Designer<br>Employee ID: SA-1111</p>
+                                </div>
+                            </div>
 
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                              
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>021885</span></td>
-                         
-                                            <td>24 Jun, 2015</td>
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                               
-                                            </td>
-                                            <td><span>021996</span></td>
-                                            
-                                            <td>28 Jun, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                  </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>027718</span></td>
-                                          
-                                            <td>21 July, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>020022</span></td>
-                                            
-                                            <td>18 Jan, 2016</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                             </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>029832</span></td>
-                                            <td>08 Mar, 2016</td>
-
-                                            <td>Jhon Doe</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                            <div class="row clearfix">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="thead-success">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Earnings</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Basic Salary</td>
+                                                    <td>$1,500</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>House Rent Allowance (H.R.A.)</td>
+                                                    <td>$50</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Bonus</td>
+                                                    <td>$150</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Conveyance</td>
+                                                    <td>$80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Other Allowance</td>
+                                                    <td>$80</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><strong>Total Earnings</strong></td>
+                                                    <td><strong>$1,860</strong></td>
+                                                </tr>
+                                            </tbody>                                            
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover">
+                                            <thead class="thead-danger">
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Deductions</th>
+                                                    <th>Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>Tax Deducted at Source (T.D.S.)</td>
+                                                    <td>$10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>ESI</td>
+                                                    <td>$0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>Provident Fund</td>
+                                                    <td>$150</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>C/Bank Loan</td>
+                                                    <td>$120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>Other Deductions</td>
+                                                    <td>$8</td>
+                                                </tr>
+                                                <tr>
+                                                    <td></td>
+                                                    <td><strong>Total Deductions</strong></td>
+                                                    <td><strong>$288</strong></td>
+                                                </tr>
+                                            </tbody>                                            
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>                            
+                            <hr>
+                            <div class="row clearfix">
+                                <div class="col-md-6">
+                                    
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    <p class="m-b-0"><b>Total Earnings:</b> $1,860</p>
+                                    <p class="m-b-0"><b>Total Deductions:</b> $288</p>
+                                    <h5 class="m-b-0 m-t-10">Net Salary $1572.00</h5>
+                                </div>                                    
+                                <div class="hidden-print col-md-12 text-right">
+                                    <hr>
+                                    <button class="btn btn-outline-secondary"><i class="icon-printer"></i></button>
+                                    <button class="btn btn-primary">Submit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </div>
@@ -408,12 +411,8 @@
 <!-- Vendor Javascript -->
 <script src="assets/js/libscripts.bundle.js"></script>
 <script src="assets/js/vendorscripts.bundle.js"></script>
-<script src="assets/js/datatablescripts.bundle.js"></script>
-<script src="assets/js/sweetalert.min.js"></script>
-<script src="assets/js/jquery-datatable.js"></script>
-<script src="assets/js/dialogs.js"></script>
 
 <script src="assets/js/main.js"></script>
 
 </body>
-</html>
+</html>s

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Quick Manager | Chat</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <meta name="description" content="HR and PM solutions tool" />
+    <meta
+      name="author"
+      content="Hasmukhsinh Solanki, Rahul Nagpal, Vaishal Gandhi"
+    />
+
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/color_skins.css" />
+  </head>
+  <body class="theme-blue">
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+      <div class="loader">
+        <div class="m-t-30">
+          <img
+            src="assets/images/straight-loader.gif"
+            width="48"
+            height="48"
+            alt="Loading"
+          />
+        </div>
+        <p>Please wait...</p>
+      </div>
+    </div>
+    <!-- Overlay For Sidebars -->
+
+    <div id="wrapper">
+      <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-btn">
+            <button type="button" class="btn-toggle-offcanvas">
+              <i class="lnr lnr-menu fa fa-bars"></i>
+            </button>
+          </div>
+
+          <div class="navbar-brand">
+            <a href="dashboard.html">
+              <img
+                src="assets/images/logo.png"
+                alt="Quick Manager Logo"
+                class="img-responsive logo"
+              />
+            </a>
+          </div>
+
+          <div class="navbar-right">
+            <form id="navbar-search" class="navbar-form search-form">
+              <input
+                value=""
+                class="form-control"
+                placeholder="Search here..."
+                type="text"
+              />
+              <button type="button" class="btn btn-default">
+                <i class="icon-magnifier"></i>
+              </button>
+            </form>
+
+            <div id="navbar-menu">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="chat.html" class="icon-menu d-none d-sm-block">
+                    <i class="icon-bubbles"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="support-ticket.html"
+                    class="icon-menu d-none d-sm-block"
+                  >
+                    <i class="icon-envelope"></i
+                    ><span class="notification-dot"></span>
+                  </a>
+                </li>
+                <li class="dropdown">
+                  <a
+                    href="javascript:void(0);"
+                    class="dropdown-toggle icon-menu"
+                    data-toggle="dropdown"
+                  >
+                    <i class="icon-bell"></i>
+                    <span class="notification-dot"></span>
+                  </a>
+                  <ul class="dropdown-menu notifications animated shake">
+                    <li class="header">
+                      <strong>You have 4 new Notifications</strong>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        <div class="media">
+                          <div class="media-left">
+                            <i class="icon-info text-warning"></i>
+                          </div>
+                          <div class="media-body">
+                            <p class="text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <span class="timestamp">10:00 AM Today</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        <div class="media">
+                          <div class="media-left">
+                            <i class="icon-like text-success"></i>
+                          </div>
+                          <div class="media-body">
+                            <p class="text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <span class="timestamp">11:30 AM Today</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        <div class="media">
+                          <div class="media-left">
+                            <i class="icon-pie-chart text-info"></i>
+                          </div>
+                          <div class="media-body">
+                            <p class="text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit.
+                            </p>
+                            <span class="timestamp">04:00 PM Today</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0);">
+                        <div class="media">
+                          <div class="media-left">
+                            <i class="icon-info text-danger"></i>
+                          </div>
+                          <div class="media-body">
+                            <p class="text">
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                              elit
+                            </p>
+                            <span class="timestamp">Yesterday</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="footer">
+                      <a href="javascript:void(0);" class="more"
+                        >See all notifications</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="login.html" class="icon-menu"
+                    ><i class="icon-login"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div id="left-sidebar" class="sidebar">
+        <div class="sidebar-scroll">
+          <div class="user-account">
+            <img
+              src="assets/images/avatar.png"
+              class="rounded-circle user-photo"
+              alt="User Profile Picture"
+            />
+            <div class="dropdown">
+              <span>Welcome,</span><br />
+              <strong>Jane Doe</strong>
+            </div>
+            <hr />
+          </div>
+          <!-- Nav tabs -->
+
+          <!-- Tab panes -->
+          <div class="tab-content p-l-0 p-r-0">
+            <div class="tab-pane animated fadeIn active" id="hr_menu">
+              <nav class="sidebar-nav">
+                <ul class="main-menu metismenu">
+                  <li>
+                    <a href="dashboard.html">
+                      <i class="icon-speedometer"></i>
+                      <span>Dashboard</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="to-do.html"> <i class="icon-list"></i>To-Do </a>
+                  </li>
+                  <li class="active">
+                    <a href="chat.html"> <i class="icon-bubbles"></i>Chat </a>
+                  </li>
+                  <li>
+                    <a href="support-ticket.html">
+                      <i class="icon-envelope"></i>Support Ticket
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#HR" class="has-arrow"
+                      ><i class="icon-users"></i><span>HR</span></a
+                    >
+                    <ul>
+                      <li>
+                        <a href="employee-management.html">
+                          Employees Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="payroll-management.html">
+                          Paroll Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="social-networking.html">
+                          Social Networking
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#PM" class="has-arrow"
+                      ><i class="icon-users"></i><span>Project Manager</span></a
+                    >
+                    <ul>
+                      <li>
+                        <a href="project-management.html">
+                          Project Management
+                        </a>
+                      </li>
+                      <li>
+                        <a href="payslip.html">
+                          Payslip
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#Employees" class="has-arrow"
+                      ><i class="icon-users"></i><span>Employees</span></a
+                    >
+                    <ul>
+                      <li>
+                        <a href="project.html">
+                          Project
+                        </a>
+                      </li>
+                      <li>
+                        <a href="taskboard.html">
+                          Taskboard
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="about-us.html">
+                      <i class="icon-user"></i>About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a href="settings.html">
+                      <i class="icon-settings"></i>Settings
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main-content">
+        <div class="container-fluid">
+          <div class="block-header">
+            <div class="row">
+              <div class="col-lg-6 col-md-8 col-sm-12">
+                <h2>
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-xs btn-link btn-toggle-fullwidth"
+                  >
+                    <i class="fa fa-arrow-left"></i>
+                  </a>
+                  Chat
+                </h2>
+                <ul class="breadcrumb">
+                  <li class="breadcrumb-item">
+                    <a href="dashboard.html">
+                      <i class="icon-home"></i>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item active">App / Chat</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="row clearfix">
+            <div class="col-lg-12">
+              <div class="card chat_app">
+                <div class="people_list">
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="icon-magnifier"></i
+                      ></span>
+                    </div>
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Search..."
+                    />
+                  </div>
+                  <ul class="list-unstyled chat-list mt-2 mb-0">
+                    <li>
+                      <img
+                        src="assets/images/employee/avatar1.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name">
+                          John Doe
+                        </div>
+                        <div class="status">
+                          <i class="fa fa-circle offline"></i> left 7 mins ago
+                        </div>
+                      </div>
+                    </li>
+                    <li class="active">
+                      <img
+                        src="assets/images/employee/avatar2.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name name2">Jane Doe</div>
+                        <div class="status name2">
+                          <i class="fa fa-circle online"></i> online
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/employee/avatar3.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name name3">Jane Doe</div>
+                        <div class="status name3">
+                          <i class="fa fa-circle online"></i> online
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/employee/avatar7.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name name4">Jane Doe</div>
+                        <div class="status name4">
+                          <i class="fa fa-circle offline"></i> left 10 hours ago
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/employee/avatar8.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name">John Doe</div>
+                        <div class="status">
+                          <i class="fa fa-circle online"></i> online
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <img
+                        src="assets/images/employee/avatar9.jpg"
+                        alt="avatar"
+                      />
+                      <div class="about">
+                        <div class="name name6">John Doe</div>
+                        <div class="status name6">
+                          <i class="fa fa-circle offline"></i> offline since Oct
+                          28
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="chat">
+                  <div class="chat-header clearfix">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <a
+                          href="javascript:void(0);"
+                          data-toggle="modal"
+                          data-target="#view_info"
+                        >
+                          <img
+                            src="assets/images/employee/avatar2.jpg"
+                            alt="avatar"
+                          />
+                        </a>
+                        <div class="chat-about">
+                          <h6 class="m-b-0">Jane Doe</h6>
+                          <small>Last seen: 2 hours ago</small>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 hidden-sm text-right">
+                        <a
+                          href="javascript:void(0);"
+                          class="btn btn-sm btn-outline-secondary"
+                          ><i class="icon-camera"></i
+                        ></a>
+                        <a
+                          href="javascript:void(0);"
+                          class="btn btn-sm btn-outline-primary"
+                          ><i class="icon-camcorder"></i
+                        ></a>
+                        <a
+                          href="javascript:void(0);"
+                          class="btn btn-sm btn-outline-info"
+                          ><i class="icon-settings"></i
+                        ></a>
+                        <a
+                          href="javascript:void(0);"
+                          class="btn btn-sm btn-outline-warning"
+                          ><i class="icon-question"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="chat-history clearfix">
+                    <ul class="m-b-0">
+                      <li class="clearfix">
+                        <div class="message-data text-right">
+                          <span class="message-data-time">10:10 AM, Today</span>
+                          <img
+                            src="assets/images/employee/avatar7.jpg"
+                            alt="avatar"
+                          />
+                        </div>
+                        <div class="message other-message float-right">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </div>
+                      </li>
+                      <li class="clearfix">
+                        <div class="message-data">
+                          <span class="message-data-time">10:12 AM, Today</span>
+                        </div>
+                        <div class="message my-message">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </div>
+                      </li>
+                      <li class="clearfix">
+                        <div class="message-data">
+                          <span class="message-data-time">10:15 AM, Today</span>
+                        </div>
+                        <div class="message my-message">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit.
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="chat-message clearfix">
+                    <div class="input-group mb-0">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"
+                          ><i class="icon-paper-plane"></i
+                        ></span>
+                      </div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter text here..."
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vendor Javascript -->
+    <script src="assets/js/libscripts.bundle.js"></script>
+    <script src="assets/js/vendorscripts.bundle.js"></script>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

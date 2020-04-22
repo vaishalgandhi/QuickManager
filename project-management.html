@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Quick Manager | Project</title>
+<title>Quick Manager | Project Management</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -11,8 +11,6 @@
 <!-- VENDOR CSS -->
 <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" href="assets/css/sweetalert.css"/>
-<link rel="stylesheet" href="assets/css/dataTables.bootstrap4.min.css">
 
 <!-- MAIN CSS -->
 <link rel="stylesheet" href="assets/css/main.css">
@@ -153,7 +151,7 @@
                 <div class="tab-pane animated fadeIn active" id="hr_menu">
                     <nav class="sidebar-nav">
                         <ul class="main-menu metismenu">
-                            <li>
+                            <li class="active">
                                 <a href="dashboard.html">
                                     <i class="icon-speedometer"></i>
                                     <span>Dashboard</span>
@@ -182,9 +180,9 @@
                                             Employees Management
                                         </a>
                                     </li>
-                                        <li>	
+                                        <li>
                                             <a href="payroll-management.html">
-                                            Payroll Management
+                                            Paroll Management
                                         </a>
                                     </li>
                                         <li>
@@ -197,9 +195,7 @@
                             <li>
                                 <a href="#PM" class="has-arrow"><i class="icon-users"></i><span>Project Manager</span></a>
                                 <ul>
-
-                                    <li class="active">
-
+                                    <li>
                                         <a href="project-management.html">
                                             Project Management
                                         </a>
@@ -214,9 +210,7 @@
                             <li>
                                 <a href="#Employees" class="has-arrow"><i class="icon-users"></i><span>Employees</span></a>
                                 <ul>
-
                                     <li>
-
                                         <a href="project.html">
                                             Project
                                         </a>
@@ -259,9 +253,7 @@
                             <a href="javascript:void(0);" class="btn btn-xs btn-link btn-toggle-fullwidth">
                                 <i class="fa fa-arrow-left"></i>
                             </a>
-                            Project
-
-
+                            Project Management
                         </h2>
                         <ul class="breadcrumb">
                             <li class="breadcrumb-item">
@@ -269,133 +261,122 @@
                                     <i class="icon-home"></i>
                                 </a>
                             </li>                            
-
-                            <li class="breadcrumb-item active">Project</li>
-
+                            <li class="breadcrumb-item active">Project Management</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
             <div class="row clearfix">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="header">
-                            <h2>Project List</h2>
-                            
+                <div class="col-lg-3 col-md-4 col-sm-12">
+                    <form class="mb-4 mt-3">
+                        <div class="form-group mb-2 m-l-0">
+                            <label for="inputPassword2" class="sr-only">Search</label>
+                            <input type="text" class="form-control" placeholder="Search...">
                         </div>
-                        <div class="body">
-                            <div class="table-responsive">
-                                <table class="table table-hover js-basic-example dataTable table-custom table-striped m-b-0 c_list">
-                                    <thead class="thead-dark">
-                                        <tr>
-                                            <th>
-                                                <label class="fancy-checkbox">
-                                                    <input class="select-all" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </th>
-                                            <th>Project Name</th>
-                                            <th>Project ID</th>
-                                            
-                                            <th>Start Date</th>
-                                            <th>Manager</th>
-
-
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                              
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>021885</span></td>
-                         
-                                            <td>24 Jun, 2015</td>
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                               
-                                            </td>
-                                            <td><span>021996</span></td>
-                                            
-                                            <td>28 Jun, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                  </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>027718</span></td>
-                                          
-                                            <td>21 July, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>020022</span></td>
-                                            
-                                            <td>18 Jan, 2016</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                             </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>029832</span></td>
-                                            <td>08 Mar, 2016</td>
-
-                                            <td>Jhon Doe</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="row clearfix">
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/01.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">iNext - Responsive Template</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 87%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/03.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Wordpress - Theme Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 15%;">
+                                        <span class="sr-only">15% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/02.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Logo Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 90%;">
+                                        <span class="">90% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/01.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">iNext - Responsive Template</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                        style="width: 87%;">
+                                        <span class="sr-only">60% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/03.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Wordpress - Theme Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="15" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 15%;">
+                                        <span class="sr-only">15% Complete</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="card">
+                        <div class="body text-left pro-img">
+                            <img class="mx-auto d-block mb-3" src="assets/images/projects/02.png" alt="">
+                            <h6 class="project-title text-primary mb-3"><a href="project-detail.html">Logo Design</a></h6>
+                            <p><strong>Lorem Ipsum is</strong> simply dummy text of the printing and typesetting industry.</p>
+                            <div class="project_progress">
+                                <div class="progress progress-xs">
+                                    <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100" style="width: 90%;">
+                                        <span class="">90% Complete</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -408,10 +389,6 @@
 <!-- Vendor Javascript -->
 <script src="assets/js/libscripts.bundle.js"></script>
 <script src="assets/js/vendorscripts.bundle.js"></script>
-<script src="assets/js/datatablescripts.bundle.js"></script>
-<script src="assets/js/sweetalert.min.js"></script>
-<script src="assets/js/jquery-datatable.js"></script>
-<script src="assets/js/dialogs.js"></script>
 
 <script src="assets/js/main.js"></script>
 
