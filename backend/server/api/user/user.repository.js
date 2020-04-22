@@ -1,15 +1,11 @@
 import BaseRepository from "@api/BaseRepository";
-import { User } from "@db/db-connect";
+import { User, Role } from "@db/db-connect";
 import UserMapper from "./user.mapper";
 import { transformPromise } from "@helpers";
 
 class UserRepository extends BaseRepository {
     constructor() {
         super(User);
-    }
-
-    allUserList() {
-    	return this.model.all();
     }
 
     async getUserDetailsById(id) {
@@ -32,10 +28,10 @@ class UserRepository extends BaseRepository {
     }
 
     async update(input, id) {
-    	const [error, collection] = await transformPromise(this.model.update(input, {
-        	returning: true,
-        	plain: true,
-        	where: { id: id }
+        const [error, collection] = await transformPromise(this.model.update(input, {
+            returning: true,
+            plain: true,
+            where: { id: id }
         }));
 
         return new Promise(((resolve, reject) => {
@@ -44,6 +40,32 @@ class UserRepository extends BaseRepository {
             }
 
             resolve(collection);
+        }));
+    }
+
+    async getAllRole(queryConfig) {
+        const [error, role] = await transformPromise(Role.findAll(queryConfig));
+
+        return new Promise(((resolve, reject) => {
+            if (error !== null) {
+                reject(error);
+            }
+
+            resolve(role);
+        }));
+    }
+
+    async delete(id) {
+        const [error, user] = await transformPromise(this.model.destroy({
+            where: { id: id }
+        }));
+
+        return new Promise(((resolve, reject) => {
+            if (error !== null) {
+                reject(error);
+            }
+
+            resolve(user);
         }));
     }
 }

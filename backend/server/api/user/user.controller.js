@@ -50,8 +50,16 @@ class UserController extends BaseController {
             res.send(super.respondWithError(error, error.error_message, 500));
         }
 
+        const paginatedResponse = super.respondWithPagination(users, queryConfig);
 
-        res.send(super.respondWithPagination(users, queryConfig));
+        const [err, roles] = await transformPromise(this.repository.getAllRole({attributes: ['id', 'name']}));
+
+        paginatedResponse.data = {
+            user: paginatedResponse.data,
+            role: roles
+        };
+
+        res.send(paginatedResponse);
     }
 
     getById(req, res, next) {
@@ -98,6 +106,24 @@ class UserController extends BaseController {
         const [alert, updatedUser] = await transformPromise(this.repository.getUserDetailsById(req.currentuser.id));
 
         res.send(super.respond(updatedUser));
+    }
+
+    async delete(req, res, next) {
+        
+        const user = req.currentuser;
+
+        if (user === null) {
+            res.send(super.respondWithError(["User not found"], "User not found", 404));
+        } else {
+            const [error, deletedUser] = await transformPromise(this.repository.delete(user.id));
+
+            if (error !== null) {
+                logger.error(error);
+                res.send(super.respond(error, error.error_message, 500));
+            }
+
+            res.json(super.respond(deletedUser, null));
+        }
     }
 }
 

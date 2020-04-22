@@ -8,12 +8,13 @@ class UserRoutes {
         this.router = router;
         this.controller = UserController;
         
-		this.parameterizedRoute();
+        this.parameterizedRoute();
         this.getLoggedInUserDetails();
         this.getAllUsers();
         this.getUserDetails();
         this.storeUser();
         this.updateUser();
+        this.deleteUser();
     }
 
     parameterizedRoute() {
@@ -44,6 +45,10 @@ class UserRoutes {
 
     updateUser() {
         this.router.put("/:id", authMiddleware, (req, res, next) => this.controller.update(req, res, next));
+    }
+
+    deleteUser() {
+        this.router.delete("/:id", authMiddleware, (req, res, next) => this.controller.delete(req, res, next));
     }
 }
 
