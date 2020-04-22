@@ -154,6 +154,45 @@ function deleteEmployeeHandler(id) {
     });
 }
 
+function projectListingHandler() {
+    $.ajax({
+        type: 'GET',
+        headers: {"Authorization": userToken},
+        url: apiServer + 'api/projects/', 
+        success: function(response) {
+            var listHtml = "";
+            
+            response.data.forEach(function(item, index) {
+                listHtml += `<div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="card">
+                                    <div class="body text-left pro-img">
+                                        <img class="mx-auto d-block mb-3" src="assets/images/projects/01.png" alt="">
+                                        <h6 class="project-title text-primary mb-3"><a href="#">${item.name}</a></h6>
+                                        <p>${item.description}</p>
+                                        <div class="project_progress">
+                                            <div class="progress progress-xs">
+                                                <div class="progress-bar l-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                                                    style="width: ${Math.floor(Math.random() * 100)}%;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>`;
+            });
+
+            $('#projectListBody').html(listHtml);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            if(xhr.status == 401) {
+                location.href = 'login.html';
+            } else {
+                alert(xhr.status+ " " +thrownError);                
+            }
+        }
+    });
+}
+
 function showConfirmMessage() {
     swal({
         title: "Are you sure?",
