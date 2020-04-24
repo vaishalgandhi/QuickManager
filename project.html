@@ -289,111 +289,12 @@
                                 <table class="table table-hover js-basic-example dataTable table-custom table-striped m-b-0 c_list">
                                     <thead class="thead-dark">
                                         <tr>
-                                            <th>
-                                                <label class="fancy-checkbox">
-                                                    <input class="select-all" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                            </th>
-                                            <th>Project Name</th>
                                             <th>Project ID</th>
-                                            
+                                            <th>Project Name</th>
                                             <th>Start Date</th>
-                                            <th>Manager</th>
-
-
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                              
-                                            </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>021885</span></td>
-                         
-                                            <td>24 Jun, 2015</td>
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                               
-                                            </td>
-                                            <td><span>021996</span></td>
-                                            
-                                            <td>28 Jun, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                  </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>027718</span></td>
-                                          
-                                            <td>21 July, 2015</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                                   </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>020022</span></td>
-                                            
-                                            <td>18 Jan, 2016</td>
-
-                                            <td>Jhon Doe</td>
-
-                                        </tr>
-                                        <tr>
-                                            <td class="width45">
-                                            <label class="fancy-checkbox">
-                                                    <input class="checkbox-tick" type="checkbox" name="checkbox">
-                                                    <span></span>
-                                                </label>
-                                             </td>
-                                            <td>
-                                                <h6 class="mb-0">Lorem Ipsum</h6>
-                                                
-                                            </td>
-                                            <td><span>029832</span></td>
-                                            <td>08 Mar, 2016</td>
-
-                                            <td>Jhon Doe</td>
-                                        </tr>
-
+                                    <tbody id="userProjectList">
                                     </tbody>
                                 </table>
                             </div>
@@ -414,6 +315,12 @@
 <script src="assets/js/dialogs.js"></script>
 
 <script src="assets/js/main.js"></script>
+
+<script>
+    $(document).ready(function() {
+        userProjectListingHandler();
+    });
+</script>
 
 </body>
 </html>

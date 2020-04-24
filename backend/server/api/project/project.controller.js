@@ -33,6 +33,26 @@ class ProjectController extends BaseController {
 
         res.send(super.respondWithPagination(projects, queryConfig));
     }
+
+    async userProjects(req, res, next) {
+        const queryString = req.query;
+        const queryConfig = super.queryParameter(queryString);
+
+        if (queryString.hasOwnProperty("dropdown") && queryString.dropdown == "true") {
+            queryConfig.attributes = ["id", "name"];
+        }
+
+        queryConfig.include = ["Project"];
+
+        const [error, projects] = await transformPromise(this.repository.userProjectList(queryConfig));
+
+        if (error !== null) {
+            logger.error(error);
+            res.send(super.respondWithError(error, error.error_message, 500));
+        }
+
+        res.send(super.respondWithPagination(projects, queryConfig));
+    }
 }
 
 module.exports = new ProjectController();

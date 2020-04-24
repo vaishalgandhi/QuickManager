@@ -35,6 +35,22 @@ function loginHandler() {
     });
 }
 
+function loginHandler() {
+    var $form = $("#msform");
+    
+    $.ajax({
+        type: 'POST',
+        url: apiServer + $form.attr("action"),
+        data: $form.serialize(), 
+        success: function(response) {
+            location.href = "login.html";
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            alert(xhr.status+ " " +thrownError);
+        }
+    });
+}
+
 function employeeListingHandler() {
     var url = 'api/users/all';
 
@@ -182,6 +198,34 @@ function projectListingHandler() {
             });
 
             $('#projectListBody').html(listHtml);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            if(xhr.status == 401) {
+                location.href = 'login.html';
+            } else {
+                alert(xhr.status+ " " +thrownError);                
+            }
+        }
+    });
+}
+
+function userProjectListingHandler() {
+    $.ajax({
+        type: 'GET',
+        headers: {"Authorization": userToken},
+        url: apiServer + 'api/projects/user-project-list', 
+        success: function(response) {
+            var listHtml = "";
+
+            response.data.forEach(function(item, index) {
+                listHtml += `<tr>
+                                <td><h6 class="mb-0">P${item.projectId * 1000}</h6></td>
+                                <td>${item.Project.name}</td>
+                                <td>24 Jun, 2019</td>
+                            </tr>`;
+            });
+
+            $('#userProjectList').html(listHtml);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             if(xhr.status == 401) {

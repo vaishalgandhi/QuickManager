@@ -9,10 +9,15 @@ class ProjectRoutes {
         this.controller = ProjectController;
         
 		this.getAllProjects();
+		this.getAllUserProjects();
     }
 
     getAllProjects() {
         this.router.get("/", authMiddleware, (req, res, next) => this.controller.index(req, res, next));
+    }
+
+    getAllUserProjects() {
+        this.router.get("/user-project-list", authMiddleware, (req, res, next) => this.controller.userProjects(req, res, next));
     }
 }
 
